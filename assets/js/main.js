@@ -4,46 +4,58 @@ $(document).ready(function() {
   var plansbutton = $('.plans');
   var featuresbutton = $('.features');
 
-  helpbutton.click(function () {
+  helpbutton.mouseenter(function () {
     helpbtn($(this));
   })
 
-  aboutbutton.click(function() {
+  helpbutton.mouseleave(function () {
+    $('.list').removeClass('active');
+  })
+
+  aboutbutton.mouseenter(function() {
     aboutbtn($(this));
   })
 
-  plansbutton.click(function() {
-    plansbtn($(this));
-    console.log($(this));
+  aboutbutton.mouseleave(function() {
+    $('.list').removeClass('active');
   })
 
-  featuresbutton.click(function() {
+  plansbutton.mouseenter(function() {
+    plansbtn($(this));
+  })
+
+  plansbutton.mouseleave(function() {
+    $('.list').removeClass('active');
+  })
+
+  featuresbutton.mouseenter(function() {
     featuresbtn($(this));
   })
 
+  featuresbutton.mouseleave(function() {
+    $('.list-features').removeClass('active');
+  })
 
 })
-
 
 //FUNCTIONS
 
 function featuresbtn(button){
   button.next().children().css('right','25%');
-  button.next().children().toggleClass('active');
+  button.next().children().addClass('active');
   console.log($(this));
 }
 
-
 function plansbtn(button){
   button.next().children().css('right','65%');
-  button.next().toggleClass('active');
+  button.next().addClass('active');
 }
 
 function aboutbtn(button){
   button.next().children().css('right','45%');
-  button.next().toggleClass('active');
+  button.next().addClass('active');
 }
 
 function helpbtn(button){
-    button.next().toggleClass('active');
+    button.next().addClass('active');
 }
