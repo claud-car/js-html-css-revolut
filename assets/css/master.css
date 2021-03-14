@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: #000;
+}
+
+.clr-white{
+  background-color: #FFF;
+}
+
 /* NAVBAR */
 .nav > *{
   height: 50px;
@@ -11,9 +19,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 /* LEFT-SIDE NAV */
+
+.topbar{
+  background-color: #FFF;
+}
+
 .left-side a , .right-side a{
   font-size: 18px;
   text-decoration: none;
@@ -26,6 +40,10 @@
 
 .logo img{
   height: 70%;
+}
+
+.logo img:hover{
+  cursor: pointer;
 }
 
 .left-side a:first-child{
@@ -73,6 +91,7 @@
 
 .list{
   display: none;
+  background-color: #FFF;
 }
 
 .list ul{
@@ -117,7 +136,7 @@
   margin: 20px 0;
 }
 
-.list ul li:hover{
+.list ul li:hover , .list-features ul li:hover{
   cursor: pointer;
   color: #000;
   text-decoration: underline;
